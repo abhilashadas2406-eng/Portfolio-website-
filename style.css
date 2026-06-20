@@ -1,0 +1,479 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg,
+            #0b1020,
+            #1a1b4b,
+            #170018);
+    color: aliceblue;
+
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(4, 4, 31);
+    color: rgb(247, 245, 247);
+    padding: 18px;
+    background-image: linear-gradient(to right, rgb(52, 52, 150), black);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    position: sticky;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+.logo {
+    font-size: 29px;
+    color: white;
+    margin-right: 23px;
+}
+
+nav ul li a {
+    color: rgb(236, 229, 238);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: purple;
+}
+
+.image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #6249ae;
+    display: block;
+}
+
+.image {
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.name {
+    text-align: center;
+    font-family: cursive;
+    font-size: larger;
+}
+
+.tag {
+    text-align: center;
+    font-family: monospace;
+    font-size: 25px;
+}
+
+.btn {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.btn a {
+    padding: 12px 24px;
+    background: #403d7e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor:pointer;
+    z-index: 1;
+    
+}
+.btn a::before{
+    transform:scaleX(0);
+}
+.btn a:hover::before{transform: scaleX(1);}
+.btn a:hover {
+    color: black;
+}
+
+.about {
+    min-height: 100vh;
+    height: 65vh;
+    justify-content: center;
+    gap: 16px;
+
+}
+
+.about {
+
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            #0b1020,
+            #1a1b4b,
+            #170018);
+    color: aliceblue;
+    color: white;
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.about h2 {
+    font-size: 52px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 23px;
+}
+
+.about-box {
+    max-width: 1450px;
+    margin: 0 auto;
+    background-color: #141a22;
+    border: 1px solid #2b3440;
+    border-radius: 18px;
+    padding: 45px 55px;
+    font-size: 28px;
+}
+
+.underline {
+    width: 90px;
+    height: 5px;
+    background-color: #7468ff;
+    border-radius: 10px;
+    margin: 0 auto 55px auto;
+
+
+}
+
+.line {
+    margin-top: 20px;
+    ;
+    width: 98%;
+    color: rgb(94, 106, 117);
+    height: 1px;
+
+
+}
+.education{
+
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            #0b1020,
+            #1a1b4b,
+            #170018);
+    color: aliceblue;
+    color: white;
+    text-align: center;
+    padding: 60px 10%;
+}
+
+
+.education h2 {
+    font-size: 52px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 23px;
+}
+.underline {
+  width: 100px;
+  height: 2px;
+  background-color: #7468ff;
+  border-radius: 10px;
+  margin: 0 auto 55px auto;
+}
+.education-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 60px;
+  flex-wrap: wrap;
+  
+}
+.education-card{
+    width: 410px;
+    min-height: 100px;
+    border: 2px solid #2b3440;
+    border-radius: 25px;
+    padding: 25px;
+    text-align: left;
+    gap: 20px;
+    background-color: #1a1b4b;
+    transition: 0.3s ease;
+    justify-content: space-around;
+   
+}
+.education-card h4 {
+  color: #7468ff;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  font-family: Arial, sans-serif;
+  white-space: normal;
+}
+.education-card h3{
+    color: whitesmoke;
+    font-size: 26px;
+    font-family: Arial, sans-serif;
+
+}
+.education-card p {
+  color: #b8c7d9;
+  font-size: 21px;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+}
+.education-card:hover{
+            background-color: rgb(111, 113, 137);
+            color:whitesmoke
+}
+
+.skills{
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            #0b1020,
+            #1a1b4b,
+            #170018);
+    color: aliceblue;
+    color: white;
+    text-align: center;
+    padding: 60px 10%;
+}
+.skills h2 {
+    font-size: 58px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 23px;
+}
+/* .underline {
+  width: 100px;
+  height: 2px;
+  background-color: #7468ff;
+  border-radius: 10px;
+  margin: 0 auto 55px auto;
+} */
+ .skills-container{
+    display: flex;
+    justify-content: space-around;
+    gap:24px;
+    flex-wrap: wrap-reverse;
+ }
+ .skills-card{
+    width: 410px;
+    min-height: 100px;
+    border: 2px solid #2b3440;
+    border-radius: 125px;
+    padding: 25px;
+    text-align: center;
+    gap: 20px;
+    background-color: #1a1b4b;
+    transition: 0.3s ease;
+    justify-content: space-around;
+ }
+ .skills-card h4{
+    color: #7468ff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  font-family: Arial, sans-serif;
+  white-space: normal;
+  font-display: fallback;
+ }
+ .skills-card p{
+    font-size: 18px;
+    white-space: normal;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    justify-content: left;
+ }
+ .skills-card:hover{
+    box-shadow: 0 0 22px rgb(127, 100, 196);
+     transform: translateY(-8px);
+ }
+ .contact {
+  min-height: 100vh;
+  padding: 60px 10%;
+  background: linear-gradient(135deg, #0b1020, #1a1b4b, #170018);
+  color: aliceblue;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 58px;
+  margin-bottom: 15px;
+}
+
+.underline {
+  width: 150px;
+  height: 3px;
+  background: #7468ff;
+  margin: 0 auto 40px;
+}
+
+.contact-container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.contact-card,
+.feedback-card {
+  background: #121827;
+  border: 1px solid #403d7e;
+  border-radius: 18px;
+  padding: 40px;
+  margin-bottom: 65px;
+}
+
+.contact-card p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.contact-card a {
+  color: #7468ff;
+  font-size: 22px;
+}
+
+.feedback-card h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.feedback-card textarea {
+  width: 90%;
+  min-height: 100px;
+  padding: 12px;
+  font-size: 18px;
+}
+
+.feedback-card input {
+  padding: 8px 18px;
+  font-size: 18px;
+  cursor: pointer;
+}
+footer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+footer p{
+    text-decoration: dotted;
+    text-align: center;
+    font-size: smaller;
+}
+.projects{
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            #0b1020,
+            #1a1b4b,
+            #170018);
+    color: aliceblue;
+    text-align: center;
+    padding: 60px 10%;
+}
+.projects h2{
+    font-size: 58px;
+  margin-bottom: 15px;
+}
+.underline {
+  width: 150px;
+  height: 3px;
+  background: #7468ff;
+  margin: 0 auto 40px;
+}
+.projects-container {
+  display: flex;
+  justify-content: center;   /* center cards instead of space-around */
+  gap: 24px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1100px;          /* ← key addition: gives room for 3 cards + gaps */
+  margin: 40px auto 0;        /* auto margins center the container itself */
+  align-items: stretch;
+}
+.projects-card{
+     width: 320px;
+  min-height: 260px;
+  padding: 25px;
+  background: #151a2e;
+  border: 1px solid #403d7e;
+  border-radius: 12px;
+  text-align: left;
+  box-sizing: border-box;
+}
+.projects-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(109, 86, 132, 0.35);
+}
+.projects-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.projects-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+.project-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+ align-items: flex-start;
+}
+
+.project-tags span {
+  padding: 5px 10px;
+  background: #403d7e;
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.btn-small {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background: #635bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  overflow: hidden;        /* keeps the fill clipped inside the rounded shape */
+  z-index: 1;
+  isolation: isolate;       /* keeps text above the fill layer */
+}
+
+.btn-small::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: left;   /* fill slides in from the left */
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+
+.btn-small:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-small:hover {
+  color: #403d7e;            /* text color flips once fill covers it */
+}
+
+
+
