@@ -11,7 +11,12 @@ body {
     color: aliceblue;
 
 }
-
+html{
+    overflow-x:hidden;
+}
+body{
+    overflow-x:hidden;
+}
 
 
 nav {
@@ -390,12 +395,12 @@ footer p{
 }
 .projects-container {
   display: flex;
-  justify-content: center;   /* center cards instead of space-around */
+  justify-content: center;   
   gap: 24px;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1100px;          /* ← key addition: gives room for 3 cards + gaps */
-  margin: 40px auto 0;        /* auto margins center the container itself */
+  max-width: 1100px;         
+  margin: 40px auto 0;        
   align-items: stretch;
 }
 .projects-card{
@@ -448,9 +453,9 @@ footer p{
   border-radius: 25px;
   font-weight: bold;
   font-size: 14px;
-  overflow: hidden;        /* keeps the fill clipped inside the rounded shape */
+  overflow: hidden;        
   z-index: 1;
-  isolation: isolate;       /* keeps text above the fill layer */
+  isolation: isolate;      
 }
 
 .btn-small::before {
@@ -462,7 +467,7 @@ footer p{
   height: 100%;
   background: white;
   transform: scaleX(0);
-  transform-origin: left;   /* fill slides in from the left */
+  transform-origin: left;   
   transition: transform 0.35s ease;
   z-index: -1;
 }
@@ -472,7 +477,91 @@ footer p{
 }
 
 .btn-small:hover {
-  color: #403d7e;            /* text color flips once fill covers it */
+  color: #403d7e;          
+}
+@media (max-width: 480px) {
+    nav ul {
+        gap: 10px;
+        font-size: 14px;
+    }
+ 
+    .logo {
+        font-size: 20px;
+    }
+ 
+    .image img {
+        width: 160px;
+        height: 160px;
+    }
+ 
+    .about h2,
+    .education h2,
+    .skills h2,
+    .contact h2,
+    .projects h2 {
+        font-size: 28px;
+    }
+ 
+    .about-box {
+        font-size: 12px;
+        padding: 20px 14px;
+    }
+ 
+    .underline {
+        margin-bottom: 30px;
+    }
+ 
+    .education-card h3 {
+        font-size: 18px;
+    }
+ 
+    .education-card p {
+        font-size: 15px;
+    }
+ 
+    .skills-card h4 {
+        font-size: 16px;
+    }
+ 
+    .skills-card p {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+ 
+    .btn a {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+ 
+    .btn {
+        gap: 12px;
+    }
+ 
+    .contact-card p,
+    .contact-card a {
+        font-size: 16px;
+        word-break: break-all;  
+    }
+ 
+    .feedback-card h3 {
+        font-size: 20px;
+    }
+ 
+    .projects-card h3 {
+        font-size: 19px;
+    }
+}
+ 
+
+@media (prefers-reduced-motion: reduce) {
+    .skills-card:hover,
+    .projects-card:hover {
+        transform: none;
+    }
+ 
+    .btn-small::before {
+        transition: none;
+    }
 }
 
 
