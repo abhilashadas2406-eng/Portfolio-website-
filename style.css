@@ -9,9 +9,11 @@ body {
             #1a1b4b,
             #170018);
     color: aliceblue;
-    overflow-x:hidden;
+     overflow-x: hidden;
 
 }
+ 
+
 
 
 nav {
@@ -110,7 +112,8 @@ nav ul li a:hover {
 }
 
 .about {
-    min-height: 100vh;
+  margin-top: 287px;
+    /* min-height: 100vh; */
     height: 65vh;
     justify-content: center;
     gap: 16px;
@@ -390,12 +393,12 @@ footer p{
 }
 .projects-container {
   display: flex;
-  justify-content: center;   
+  justify-content: center;   /* center cards instead of space-around */
   gap: 24px;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1100px;         
-  margin: 40px auto 0;        
+  max-width: 1100px;          /* ← key addition: gives room for 3 cards + gaps */
+  margin: 40px auto 0;        /* auto margins center the container itself */
   align-items: stretch;
 }
 .projects-card{
@@ -448,9 +451,9 @@ footer p{
   border-radius: 25px;
   font-weight: bold;
   font-size: 14px;
-  overflow: hidden;        
+  overflow: hidden;        /* keeps the fill clipped inside the rounded shape */
   z-index: 1;
-  isolation: isolate;      
+  isolation: isolate;       /* keeps text above the fill layer */
 }
 
 .btn-small::before {
@@ -462,7 +465,7 @@ footer p{
   height: 100%;
   background: white;
   transform: scaleX(0);
-  transform-origin: left;   
+  transform-origin: left;   /* fill slides in from the left */
   transition: transform 0.35s ease;
   z-index: -1;
 }
@@ -472,8 +475,163 @@ footer p{
 }
 
 .btn-small:hover {
-  color: #403d7e;          
+  color: #403d7e;            /* text color flips once fill covers it */
 }
+
+
+@media (max-width: 1024px) {
+    .about-box {
+        padding: 35px 30px;
+        font-size: 22px;
+    }
+ 
+    .about h2,
+    .education h2,
+    .skills h2,
+    .contact h2,
+    .projects h2 {
+        font-size: 42px;
+    }
+ 
+    .education-card,
+    .skills-card {
+        width: calc(50% - 30px);
+    }
+ 
+    .projects-card {
+        width: calc(50% - 12px);
+    }
+ 
+    .projects-container {
+        max-width: 720px;
+    }
+}
+ 
+/* ─── Large Mobile / Small Tablet: ≤ 768px ───────────── */
+@media (max-width: 768px) {
+    /* Nav collapses to column on small screens */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 14px 16px;
+        gap: 10px;
+    }
+ 
+    .logo {
+        font-size: 24px;
+        margin-right: 0;
+    }
+ 
+    nav ul {
+        gap: 16px;
+        justify-content: center;
+    }
+ 
+    /* Hero */
+    .image img {
+        width: 200px;
+        height: 200px;
+    }
+ 
+    .image {
+        padding: 24px 16px;
+        margin-top: 12px;
+    }
+ 
+    .tag {
+        font-size: 18px;
+    }
+ 
+    .name {
+        font-size: 20px;
+    }
+ 
+    .btn {
+        gap: 16px;
+    }
+ 
+    /* Sections */
+    .about,
+    .education,
+    .skills,
+    .contact,
+    .projects {
+        padding: 50px 6%;
+    }
+ 
+    .about h2,
+    .education h2,
+    .skills h2,
+    .contact h2,
+    .projects h2 {
+        font-size: 36px;
+    }
+ 
+    .about-box {
+        padding: 28px 20px;
+        font-size: 18px;
+        border-radius: 14px;
+    }
+ 
+    /* Education: full width on mobile */
+    .education-container {
+        gap: 28px;
+    }
+ 
+    .education-card {
+        width: 100%;
+    }
+ 
+    .education-card h3 {
+        font-size: 20px;
+    }
+ 
+    .education-card p {
+        font-size: 17px;
+    }
+ 
+    /* Skills: full width on mobile */
+    .skills-container {
+        gap: 20px;
+    }
+ 
+    .skills-card {
+        width: 100%;
+        border-radius: 20px;    /* soften the pill shape on small screens */
+    }
+ 
+    /* Contact */
+    .contact-card,
+    .feedback-card {
+        padding: 28px 20px;
+    }
+ 
+    .contact-card p,
+    .contact-card a {
+        font-size: 18px;
+    }
+ 
+    .feedback-card h3 {
+        font-size: 22px;
+    }
+ 
+    .feedback-card textarea {
+        width: 100%;
+        font-size: 16px;
+    }
+ 
+    /* Projects: stack to single column */
+    .projects-card {
+        width: 100%;
+    }
+ 
+    .projects-container {
+        max-width: 100%;
+        margin-top: 24px;
+    }
+}
+ 
+/* ─── Small Mobile: ≤ 480px ──────────────────────────── */
 @media (max-width: 480px) {
     nav ul {
         gap: 10px;
@@ -535,7 +693,7 @@ footer p{
     .contact-card p,
     .contact-card a {
         font-size: 16px;
-        word-break: break-all;  
+        word-break: break-all;  /* prevent long email/links from overflowing */
     }
  
     .feedback-card h3 {
@@ -547,7 +705,7 @@ footer p{
     }
 }
  
-
+/* ─── Respect reduced-motion preference ───────────────── */
 @media (prefers-reduced-motion: reduce) {
     .skills-card:hover,
     .projects-card:hover {
@@ -558,6 +716,7 @@ footer p{
         transition: none;
     }
 }
+
 
 
 
