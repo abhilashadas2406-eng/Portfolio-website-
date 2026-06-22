@@ -9,13 +9,8 @@ body {
             #1a1b4b,
             #170018);
     color: aliceblue;
+    overflow-x:hidden;
 
-}
-html{
-    overflow-x:hidden;
-}
-body{
-    overflow-x:hidden;
 }
 
 
